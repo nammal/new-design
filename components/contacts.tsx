@@ -38,6 +38,14 @@ const Contacts = () => {
                 Manager@xbetagents.com
               </a>
             </div>
+            <div className="flex items-center gap-2 sm:flex-row flex-col">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
+                alt=""
+                className="size-10"
+              />
+              <p className="text-lg font-semibold">@Rashia_1xRetail</p>
+            </div>
           </div>
           <ContactForm />
         </div>{" "}
@@ -76,7 +84,7 @@ const ContactForm = () => {
       },
       body: JSON.stringify(data),
     });
-
+    console.log(res);
     if (res.ok) {
       setSubmitted(true);
       setData({
