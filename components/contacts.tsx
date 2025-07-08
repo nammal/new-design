@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { Check } from "lucide-react";
+import { useEffect, useState } from "react";
 
 const Contacts = () => {
   return (
@@ -84,7 +85,7 @@ const ContactForm = () => {
       },
       body: JSON.stringify(data),
     });
-    console.log(res);
+
     if (res.ok) {
       setSubmitted(true);
       setData({
@@ -96,6 +97,18 @@ const ContactForm = () => {
       });
     }
   };
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+
+    if (submitted) {
+      timeoutId = setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    }
+
+    return () => clearTimeout(timeoutId);
+  }, [submitted]);
 
   return (
     <div className="bg-white text-black sm:p-10 p-6 rounded-md z-10 w-full">
@@ -148,6 +161,11 @@ const ContactForm = () => {
           Send
         </button>
       </form>
+      {submitted && (
+        <p className="flex gap-2 mt-3">
+          <Check className="text-green-400" /> Your submission was successful.
+        </p>
+      )}
     </div>
   );
 };
