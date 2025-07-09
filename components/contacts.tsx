@@ -17,7 +17,7 @@ const Contacts = () => {
         <div className="container sm:px-14 px-6 gap-4 flex items-center justify-center sm:flex-row flex-col">
           <div className="flex flex-col items-center sm:items-baseline gap-3 text-white z-10 w-full">
             <h4 className="sm:text-7xl text-lg  font-extrabold">CONTACTS</h4>
-            <div className="flex items-center gap-2 sm:flex-row flex-col">
+            {/* <div className="flex items-center gap-2 sm:flex-row flex-col">
               <img
                 src="https://xbetagents.com/wp-content/uploads/2024/03/Picture2.png"
                 alt=""
@@ -38,7 +38,7 @@ const Contacts = () => {
               >
                 Manager@xbetagents.com
               </a>
-            </div>
+            </div> */}
             <div className="flex items-center gap-2 sm:flex-row flex-col">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
