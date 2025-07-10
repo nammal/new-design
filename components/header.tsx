@@ -113,7 +113,10 @@ const Header = () => {
               <a href="#contacts">Contacts</a>
             </li>
           </ul>
-          <button className="uppercase bg-[#78A32F] rounded-md px-8 text-base ms-12 hidden sm:block">
+          <button
+            onClick={() => (window.location.href = "#contacts")}
+            className="uppercase bg-[#78A32F] rounded-md px-8 text-base ms-12 hidden sm:block"
+          >
             Become an agent
           </button>
         </div>

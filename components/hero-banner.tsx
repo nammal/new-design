@@ -49,7 +49,10 @@ const HeroBanner = () => {
             (www.1xbet.com) <br />
             and get a commission.
           </p>
-          <button className="uppercase bg-[#78A32F] rounded-md px-8 text-base py-3 text-white mt-5">
+          <button
+            onClick={() => (window.location.href = "#contacts")}
+            className="uppercase bg-[#78A32F] rounded-md px-8 text-base py-3 text-white mt-5"
+          >
             Become an agent
           </button>
         </div>
