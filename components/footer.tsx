@@ -1,3 +1,4 @@
+"use client";
 const Footer = () => {
   return (
     <footer className="bg-[#0C1424] flex item-center justify-center ">
@@ -29,7 +30,10 @@ const Footer = () => {
             «1xbet Agent». All rights reserved and protected by law.
           </small>
         </div>
-        <button className="uppercase text-white bg-[#78A32F] rounded-md px-8 text-base  h-12">
+        <button
+          onClick={() => (window.location.href = "#contacts")}
+          className="uppercase text-white bg-[#78A32F] rounded-md px-8 text-base  h-12"
+        >
           Become an agent
         </button>
       </div>
